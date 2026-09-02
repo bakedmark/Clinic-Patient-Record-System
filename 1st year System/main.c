@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_PATIENTS 100
+#define MAX_PATIENTS 100 // it can add up to 100 patients 
 
 void addPatient();
 void viewAllPatients();
