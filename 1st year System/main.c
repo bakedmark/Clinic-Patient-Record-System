@@ -3,13 +3,15 @@
 
 #define MAX_PATIENTS 100 // it can add up to 100 patients 
 
+// function prototype
 void addPatient();
 void viewAllPatients();
 void editPatient();
 void searchPatient();
 void deletePatient();
 
-typedef struct
+
+typedef struct // data entry for each patient 
 {
     int id;            // up to 10 digits
     char name[50];     // Lastname, First Name MI.
@@ -22,7 +24,7 @@ typedef struct
 } Patient;
 
 Patient patients[MAX_PATIENTS];
-int patientCount = 0; //
+int patientCount = 0; // global variable that stores each patient array ex. patients[0] ...
 
 int main()
 {
@@ -39,7 +41,7 @@ int main()
     printf("\n\t\t\t\t\t[5] Delete Patient");
     printf("\t\t[6] Exit\n");
 
-    do
+    do 
     {
 
         printf("\n\n\t\t\t\tEnter your choice from the menu: ");
@@ -188,6 +190,36 @@ void editPatient()
 
 void searchPatient()
 {
+    int searchID;
+    int found = 0;
+
+    printf("\n\t\t\t\tPatient ID: ");
+    scanf("%d", &searchID);
+
+    for (int i = 0; i < patientCount; i++)
+    {
+        if (patients[i].id == searchID)
+        {
+            printf("\n\t\t\t\tID Number                       : %d", patients[i].id);
+            printf("\n\t\t\t\tName [Lastname, First Name MI.] : %s", patients[i].name);
+            printf("\n\t\t\t\tBirtday [MM/DD/YYYY]            : %d", patients[i].birtday);
+            printf("\n\t\t\t\tAge                             : %d", patients[i].age);
+            printf("\n\t\t\t\tGender                          : %s", patients[i].gender);
+            printf("\n\t\t\t\tAddress                         : %s", patients[i].address);
+            printf("\n\t\t\t\tContact Number                  : %d", patients[i].contact);
+            printf("\n\t\t\t\tIllness                         : %s\n", patients[i].disease);
+            printf("\n\t\t\t\t================================================\n");
+
+            found = 1;
+            break;
+        }
+    }
+
+    if (found == 0)
+    {
+        printf("\n\t\t\t\t\t\t\t\tNo Patient Found");
+        printf("\n\t\t\t\t================================================\n");
+    }
 }
 
 void viewAllPatients()
