@@ -35,10 +35,10 @@ int main()
     printf("\n\n\t\t\t\t\t\t==========================================================\n\n");
 
     printf("\n\t\t\t\t[1] Add Patient");
-    printf("\t\t[2] View All Patients");
+    printf("\t\t[2] View Records");
     printf("\t\t[3] Search Patient");
-    printf("\t\t[4] Edit Patient\n");
-    printf("\n\t\t\t\t\t[5] Delete Patient");
+    printf("\t\t[4] Update Record\n");
+    printf("\n\t\t\t\t\t[5] Delete Record");
     printf("\t\t[6] Exit\n");
 
     do 
