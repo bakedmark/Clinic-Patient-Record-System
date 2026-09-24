@@ -5,6 +5,7 @@
 
 #define MAX_PATIENTS 100
 
+// function prototype
 void addPatient();
 void viewRecord();
 void updateRecord();
