@@ -3,8 +3,9 @@
 #include <stdlib.h>  // for system("cls")
 #include <windows.h> // for Sleep()
 
-#define MAX_PATIENTS 100
+#define MAX_PATIENTS 100  // maximum number of patients that can be stored in the system
 
+// function prototypes
 void addPatient();
 void viewRecord();
 void updateRecord();
