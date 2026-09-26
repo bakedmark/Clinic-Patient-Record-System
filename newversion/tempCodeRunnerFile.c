@@ -1,8 +1,3 @@
-/*git add .
-git commit -m "Update main.c"
-git push
-*/
-
 #include <stdio.h>   // for printf() and scanf()
 #include <string.h>  // for strcspn() and strcpy()
 #include <stdlib.h>  // for system("cls")
